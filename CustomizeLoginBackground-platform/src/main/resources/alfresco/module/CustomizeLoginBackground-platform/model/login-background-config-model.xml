@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="fslb:model" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+        <import uri="http://www.alfresco.org/model/system/1.0" prefix="sys"/>
+    </imports>
+
+    <namespaces>
+        <namespace uri="http://flex-solution.com/model/login-background/1.0" prefix="fslb"/>
+    </namespaces>
+
+    <types>
+        <type name="fslb:login-background-config">
+            <title>Describes Login Background config</title>
+            <parent>cm:content</parent>
+            <properties>
+                <property name="fslb:backgroundColor">
+                    <title>Background Color</title>
+                    <type>d:text</type>
+                    <default>FFFFFF</default>
+                </property>
+                <property name="fslb:backgroundImage">
+                    <title>Background Image</title>
+                    <type>d:content</type>
+                </property>
+            </properties>
+            <mandatory-aspects>
+                <aspect>fslb:doNotIndexContentControl</aspect>
+                <aspect>sys:hidden</aspect>
+            </mandatory-aspects>
+        </type>
+    </types>
+
+    <aspects>
+        <aspect name="fslb:doNotIndexContentControl">
+            <title>Do Not Index Control</title>
+            <parent>cm:indexControl</parent>
+            <overrides>
+                <property name="cm:isIndexed">
+                    <default>false</default>
+                </property>
+                <property name="cm:isContentIndexed">
+                    <default>false</default>
+                </property>
+            </overrides>
+        </aspect>
+    </aspects>
+
+</model>

@@ -1,0 +1,15 @@
+<extension>
+  <modules>
+    <module>
+      <id>site logo background patch</id>
+      <version>1.0</version>
+      <auto-deploy>true</auto-deploy>
+      <customizations>
+        <customization>
+          <targetPackageRoot>org.alfresco.components.guest</targetPackageRoot>
+          <sourcePackageRoot>com.flexsolution.loginbackground</sourcePackageRoot>
+        </customization>
+      </customizations>
+    </module>
+  </modules>
+</extension>

@@ -1,0 +1,1 @@
+{"isBackgroundImage":${isBackgroundImage?c},"color":"#${color}"}

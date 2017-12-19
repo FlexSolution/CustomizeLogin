@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>Get css stile for login page</shortname>
+    <description>returns css file for login page</description>
+    <url>/customize/login/backgroundStyle</url>
+    <authentication>none</authentication>
+    <format default="json"/>
+    <transaction allow="readwrite">required</transaction>
+</webscript>

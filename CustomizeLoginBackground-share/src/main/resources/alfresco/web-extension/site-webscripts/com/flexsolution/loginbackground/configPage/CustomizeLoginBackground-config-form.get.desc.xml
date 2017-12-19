@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Customize Login Background config Form Component</shortname>
+  <description>Component that renders a form based Customize Login Background config on a repository form model</description>
+  <url>/components/login-background-config-form</url>
+  <family>admin-console</family>
+</webscript>
