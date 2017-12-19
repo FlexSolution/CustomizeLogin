@@ -19,7 +19,7 @@
                 <property name="fslb:backgroundColor">
                     <title>Background Color</title>
                     <type>d:text</type>
-                    <default>FFFFFF</default>
+                    <default>F8982B</default>
                 </property>
                 <property name="fslb:backgroundImage">
                     <title>Background Image</title>

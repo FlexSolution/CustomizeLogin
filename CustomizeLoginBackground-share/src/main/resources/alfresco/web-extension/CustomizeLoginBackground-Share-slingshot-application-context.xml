@@ -5,7 +5,7 @@
                 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
     <!-- Add module specific messages and labels -->
-    <bean id="com.flexsolution.resetPassword-share.resources"
+    <bean id="com.flexsolution.background-login-share.resources"
           class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
         <property name="resourceBundles">
             <list>
