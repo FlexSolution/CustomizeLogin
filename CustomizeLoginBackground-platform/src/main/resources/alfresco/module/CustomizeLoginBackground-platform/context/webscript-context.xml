@@ -5,9 +5,22 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="webscript.com.flexsolution.sitelogo.image.get" parent="webscript"
-          class="com.flexsolution.sitelogo.webscript.BackgroundLoginImageWebScript">
+    <bean id="webscript.com.flexsolution.loginbackground.image.get" parent="webscript"
+          class="com.flexsolution.loginbackground.webscript.BackgroundLoginImageWebScript">
         <property name="contentService" ref="ContentService"/>
+        <property name="resourceService" ref="NodeResourceService"/>
+    </bean>
+
+    <bean id="webscript.com.flexsolution.loginbackground.style.get" parent="webscript"
+          class="com.flexsolution.loginbackground.webscript.BackgroundLoginColorWebScript">
+        <property name="contentService" ref="ContentService"/>
+        <property name="resourceService" ref="NodeResourceService"/>
+        <property name="nodeService" ref="NodeService"/>
+    </bean>
+
+    <bean id="webscript.com.flexsolution.loginbackground.node-config.get" parent="webscript"
+          class="com.flexsolution.loginbackground.webscript.LoginBackgroundConfigNodeWebScript">
+        <property name="resourceService" ref="NodeResourceService"/>
     </bean>
 
 </beans>

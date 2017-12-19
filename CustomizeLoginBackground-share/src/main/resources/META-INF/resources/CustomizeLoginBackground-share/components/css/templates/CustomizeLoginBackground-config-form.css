@@ -1,0 +1,17 @@
+.login-background-config-form-container {
+    width: 800px;
+}
+
+.login-background-config-form-container input.general,
+.login-background-config-form-container input.details {
+    width: 99.5%;
+}
+
+.login-background-config-form-container input.column2-general,
+.login-background-config-form-container input.column2-details-1 {
+    width: 98.8%;
+}
+
+.login-background-config-form-container input.column3-contact {
+    width: 98.5%;
+}

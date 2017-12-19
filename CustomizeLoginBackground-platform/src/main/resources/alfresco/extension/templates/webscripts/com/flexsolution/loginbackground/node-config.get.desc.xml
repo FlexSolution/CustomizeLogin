@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>Get Customize Login Background config node</shortname>
+    <description>Return Customize Login Background config nodeRef</description>
+    <url>/customize/login/config-node</url>
+    <format default="json">argument</format>
+    <authentication>admin</authentication>
+    <transaction>required</transaction>
+</webscript>

@@ -1,0 +1,24 @@
+<alfresco-config>
+    <config evaluator="node-type" condition="fslb:login-background-config">
+        <forms>
+            <form>
+                <field-visibility>
+                    <show id="fslb:backgroundColor"/>
+                    <!--todo -->
+                    <!--<show id="fslb:backgroundImage"/>-->
+                    <hide id="cm:isIndexed"/>
+                    <hide id="cm:isContentIndexed"/>
+                </field-visibility>
+                <appearance>
+                    <set id="login-background" appearance="title" label-id="Customize Login Background"
+                         template="/org/alfresco/components/form/2-column-set.ftl"/>
+                    <field id="fslb:backgroundColor" set="login-background">
+                        <control template="/com/flexsolution/loginbackground/share/components/form/controls/color-picker.ftl"/>
+                    </field>
+                    <!--todo -->
+                    <!--<field id="fslb:backgroundImage" set="login-background"/>-->
+                </appearance>
+            </form>
+        </forms>
+    </config>
+</alfresco-config>

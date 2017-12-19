@@ -7,7 +7,7 @@
       <customizations>
         <customization>
           <targetPackageRoot>org.alfresco.components.guest</targetPackageRoot>
-          <sourcePackageRoot>com.flexsolution.sitelogo</sourcePackageRoot>
+          <sourcePackageRoot>com.flexsolution.loginbackground</sourcePackageRoot>
         </customization>
       </customizations>
     </module>

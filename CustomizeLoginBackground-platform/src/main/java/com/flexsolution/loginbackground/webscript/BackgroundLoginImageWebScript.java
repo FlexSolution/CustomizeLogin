@@ -1,10 +1,11 @@
-package com.flexsolution.sitelogo.webscript;
+package com.flexsolution.loginbackground.webscript;
 
-import org.alfresco.model.ContentModel;
+import com.flexsolution.loginbackground.model.Constants;
+import com.flexsolution.loginbackground.model.LoginBackgroundConfigModel;
+import com.flexsolution.loginbackground.util.ResourceService;
 import org.alfresco.repo.content.MimetypeMap;
 import org.alfresco.repo.security.authentication.AuthenticationUtil;
 import org.alfresco.service.cmr.repository.ContentService;
-import org.alfresco.service.cmr.repository.NodeRef;
 import org.springframework.extensions.webscripts.AbstractWebScript;
 import org.springframework.extensions.webscripts.WebScriptRequest;
 import org.springframework.extensions.webscripts.WebScriptResponse;
@@ -12,23 +13,23 @@ import org.springframework.util.FileCopyUtils;
 
 import java.io.IOException;
 
-/**
- * Created by max on 12/19/17 .
- */
+
 public class BackgroundLoginImageWebScript extends AbstractWebScript {
 
     private ContentService contentService;
+    private ResourceService resourceService;
 
     @Override
     public void execute(WebScriptRequest req, WebScriptResponse res) throws IOException {
-
         res.setContentType(MimetypeMap.MIMETYPE_IMAGE_JPEG);
-        FileCopyUtils.copy(AuthenticationUtil.runAs(() -> contentService.getReader(new NodeRef("workspace://SpacesStore/b23c2a62-3ede-446d-ae02-1d384fd185a3"), ContentModel.PROP_CONTENT).getContentInputStream(),
-                AuthenticationUtil.getAdminUserName()), res.getOutputStream());
-
+        FileCopyUtils.copy(AuthenticationUtil.runAs(() -> contentService.getReader(resourceService.getNode(Constants.CONFIG_NODE_PATH, LoginBackgroundConfigModel.TYPE_LOGIN_BACKGROUND_CONFIG_TYPE), LoginBackgroundConfigModel.PROP_BACKGROUND_IMAGE).getContentInputStream(), AuthenticationUtil.getAdminUserName()), res.getOutputStream());
     }
 
     public void setContentService(ContentService contentService) {
         this.contentService = contentService;
+    }
+
+    public void setResourceService(ResourceService resourceService) {
+        this.resourceService = resourceService;
     }
 }
