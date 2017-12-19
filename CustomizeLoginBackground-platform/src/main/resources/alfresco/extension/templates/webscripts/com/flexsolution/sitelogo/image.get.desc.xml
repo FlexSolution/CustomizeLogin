@@ -1,0 +1,7 @@
+<webscript>
+    <shortname>Get image file for login page</shortname>
+    <description>returns image file for login page</description>
+    <url>/customize/login/image</url>
+    <authentication>none</authentication>
+    <transaction allow="readwrite">required</transaction>
+</webscript>
