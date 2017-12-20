@@ -12,7 +12,6 @@
         <@script type="text/javascript" src="${url.context}/res/yui/slider/slider.js"/>
         <@script type="text/javascript" src="${url.context}/res/yui/colorpicker/colorpicker.js"/>
         <@script type="text/javascript" src="CustomizeLoginBackground-share/components/js/form/controls/flex-solution-color-picker.js"/>
-        <@script type="text/javascript" src="CustomizeLoginBackground-share/components/js/templates/CustomizeLoginBackground-config-form.js"/>
     </@>
 
     <@markup id="widgets">
