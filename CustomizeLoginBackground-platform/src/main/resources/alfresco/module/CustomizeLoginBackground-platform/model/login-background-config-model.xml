@@ -25,6 +25,11 @@
                     <title>Background Image</title>
                     <type>d:content</type>
                 </property>
+                <property name="fslb:deleteBackgroundImage">
+                    <title>Delete Background Image</title>
+                    <type>d:boolean</type>
+                    <default>false</default>
+                </property>
             </properties>
             <mandatory-aspects>
                 <aspect>fslb:doNotIndexContentControl</aspect>

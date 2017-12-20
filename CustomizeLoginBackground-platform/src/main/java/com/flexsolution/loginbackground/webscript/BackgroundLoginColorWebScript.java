@@ -4,6 +4,7 @@ import com.flexsolution.loginbackground.model.Constants;
 import com.flexsolution.loginbackground.model.LoginBackgroundConfigModel;
 import com.flexsolution.loginbackground.util.ResourceService;
 import org.alfresco.repo.security.authentication.AuthenticationUtil;
+import org.alfresco.service.cmr.repository.ContentReader;
 import org.alfresco.service.cmr.repository.ContentService;
 import org.alfresco.service.cmr.repository.NodeRef;
 import org.alfresco.service.cmr.repository.NodeService;
@@ -35,7 +36,8 @@ public class BackgroundLoginColorWebScript extends DeclarativeWebScript {
         NodeRef node = resourceService.getNode(Constants.CONFIG_NODE_PATH, LoginBackgroundConfigModel.TYPE_LOGIN_BACKGROUND_CONFIG_TYPE);
 
         model.put(COLOR, nodeService.getProperty(node, LoginBackgroundConfigModel.PROP_BACKGROUND_COLOR));
-        model.put(IS_BACKGROUND_IMAGE, contentService.getReader(node, LoginBackgroundConfigModel.PROP_BACKGROUND_IMAGE) != null);
+        ContentReader reader = contentService.getReader(node, LoginBackgroundConfigModel.PROP_BACKGROUND_IMAGE);
+        model.put(IS_BACKGROUND_IMAGE, reader != null && reader.exists() && reader.getSize() > 0);
 
         return model;
     }

@@ -3,20 +3,22 @@
         <forms>
             <form>
                 <field-visibility>
+                    <show id="fslb:backgroundImage"/>
                     <show id="fslb:backgroundColor"/>
-                    <!--todo -->
-                    <!--<show id="fslb:backgroundImage"/>-->
+                    <show id="fslb:deleteBackgroundImage"/>
                     <hide id="cm:isIndexed"/>
                     <hide id="cm:isContentIndexed"/>
                 </field-visibility>
                 <appearance>
-                    <set id="login-background" appearance="title" label-id="Customize Login Background"
-                         template="/org/alfresco/components/form/2-column-set.ftl"/>
-                    <field id="fslb:backgroundColor" set="login-background">
+                    <set id="login-background" appearance="title" label-id="Customize Login Background"/>
+                    <set id="login-background-3-columns" appearance="" template="/org/alfresco/components/form/2-column-set.ftl"/>
+                    <field id="fslb:backgroundImage" set="login-background">
+                        <control template="/com/flexsolution/loginbackground/share/components/form/controls/file.ftl"/>
+                    </field>
+                    <field id="fslb:backgroundColor" set="login-background-3-columns">
                         <control template="/com/flexsolution/loginbackground/share/components/form/controls/color-picker.ftl"/>
                     </field>
-                    <!--todo -->
-                    <!--<field id="fslb:backgroundImage" set="login-background"/>-->
+                    <field id="fslb:deleteBackgroundImage" set="login-background-3-columns"/>
                 </appearance>
             </form>
         </forms>

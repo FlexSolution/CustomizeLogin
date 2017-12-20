@@ -26,6 +26,7 @@ public class LoginBackgroundConfigFormWebScript extends FormUIGet {
     private static final String NODE_REF = "nodeRef";
     private static final String NODE = "node";
     private static final String URI = "/customize/login/config-node";
+    private static final String REDIRECT_URL = "/page/console/admin-console/CustomizeLoginBackground-config-form";
 
     private ConnectorService connectorService;
 
@@ -50,7 +51,10 @@ public class LoginBackgroundConfigFormWebScript extends FormUIGet {
         if (itemId != null && itemId.length() > 0) {
             model = generateModel(NODE, itemId, req, status, cache);
             Map<String, Object> modelForm = (Map<String, Object>) model.get(MODEL_FORM);
-            modelForm.put(MODEL_ENCTYPE, ENCTYPE_JSON);
+            modelForm.put(MODEL_ENCTYPE, ENCTYPE_MULTIPART);
+            modelForm.put(MODEL_REDIRECT, req.getContextPath() + REDIRECT_URL);
+            modelForm.put(PARAM_SUBMISSION_URL, req.getContextPath() + "/proxy/alfresco/api/customize/login/node/" +
+                    itemId.replaceAll("://", "/") + "/formprocessor");
         } else {
             model = new HashMap<>(1);
             model.put(MODEL_FORM, null);
