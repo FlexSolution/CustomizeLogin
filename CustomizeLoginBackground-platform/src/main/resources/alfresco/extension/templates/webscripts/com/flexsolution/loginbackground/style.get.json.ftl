@@ -1,1 +1,1 @@
-{"isBackgroundImage":${isBackgroundImage?c},"color":"#${color}"}
+{"isBackgroundImage":${isBackgroundImage?c},"color":"#${color}","mode":"${mode}"}

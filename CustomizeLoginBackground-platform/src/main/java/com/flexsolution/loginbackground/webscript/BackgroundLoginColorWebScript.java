@@ -21,6 +21,7 @@ public class BackgroundLoginColorWebScript extends DeclarativeWebScript {
 
     private static final String COLOR = "color";
     private static final String IS_BACKGROUND_IMAGE = "isBackgroundImage";
+    private static final String MODE = "mode";
     private ContentService contentService;
     private ResourceService resourceService;
     private NodeService nodeService;
@@ -36,6 +37,7 @@ public class BackgroundLoginColorWebScript extends DeclarativeWebScript {
         NodeRef node = resourceService.getNode(Constants.CONFIG_NODE_PATH, LoginBackgroundConfigModel.TYPE_LOGIN_BACKGROUND_CONFIG_TYPE);
 
         model.put(COLOR, nodeService.getProperty(node, LoginBackgroundConfigModel.PROP_BACKGROUND_COLOR));
+        model.put(MODE, nodeService.getProperty(node, LoginBackgroundConfigModel.PROP_BACKGROUND_IMAGE_DISPLAY_MODE));
         ContentReader reader = contentService.getReader(node, LoginBackgroundConfigModel.PROP_BACKGROUND_IMAGE);
         model.put(IS_BACKGROUND_IMAGE, reader != null && reader.exists() && reader.getSize() > 0);
 
