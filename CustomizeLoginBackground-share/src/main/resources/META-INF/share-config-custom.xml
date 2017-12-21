@@ -3,22 +3,37 @@
         <forms>
             <form>
                 <field-visibility>
+                    <show id="cm:title" force="true"/>
                     <show id="fslb:backgroundImage"/>
                     <show id="fslb:backgroundColor"/>
                     <show id="fslb:deleteBackgroundImage"/>
+                    <show id="fslb:backgroundImageDisplayMode"/>
                     <hide id="cm:isIndexed"/>
                     <hide id="cm:isContentIndexed"/>
                 </field-visibility>
                 <appearance>
                     <set id="login-background" appearance="title" label-id="Customize Login Background"/>
-                    <set id="login-background-3-columns" appearance="" template="/org/alfresco/components/form/2-column-set.ftl"/>
-                    <field id="fslb:backgroundImage" set="login-background">
+                    <set id="login-background-2-columns" appearance=""
+                         template="/org/alfresco/components/form/2-column-set.ftl"/>
+                    <set id="login-background-3-columns" appearance=""
+                         template="/org/alfresco/components/form/2-column-set.ftl"/>
+                    <field id="cm:title" set="login-background">
+                        <control template="/com/flexsolution/loginbackground/share/components/form/controls/preview.ftl">
+                            <control-param name="contentField">fslb_backgroundImage</control-param>
+                        </control>
+                    </field>
+                    <field id="fslb:backgroundImage" set="login-background-2-columns">
                         <control template="/com/flexsolution/loginbackground/share/components/form/controls/file.ftl"/>
                     </field>
+                    <field id="fslb:deleteBackgroundImage" set="login-background-2-columns"/>
                     <field id="fslb:backgroundColor" set="login-background-3-columns">
                         <control template="/com/flexsolution/loginbackground/share/components/form/controls/color-picker.ftl"/>
                     </field>
-                    <field id="fslb:deleteBackgroundImage" set="login-background-3-columns"/>
+                    <field id="fslb:backgroundImageDisplayMode" set="login-background-3-columns">
+                        <control template="/org/alfresco/components/form/controls/selectone.ftl">
+                            <control-param name="options">fill|Fill,fit-auto|Auto fit,fit-height|Fit by height,fit-width|Fit by width,stretch|Stretch,tile|Tile,center|Center</control-param>
+                        </control>
+                    </field>
                 </appearance>
             </form>
         </forms>

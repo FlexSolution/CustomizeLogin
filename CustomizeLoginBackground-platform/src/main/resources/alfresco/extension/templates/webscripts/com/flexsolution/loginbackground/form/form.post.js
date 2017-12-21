@@ -26,7 +26,7 @@
                 deleteNode.save();
             }
 
-            if (!deleteImage && saveImageField) {
+            if (!deleteImage && saveImageField && saveImageField.value.length() > 0) {
                 var node = search.findNode(itemId.replace("/", "://")); // back to usual NodeRef
                 node.properties["fslb:backgroundImage"].guessMimetype(saveImageField.filename);
                 node.properties["fslb:backgroundImage"].write(saveImageField.content);

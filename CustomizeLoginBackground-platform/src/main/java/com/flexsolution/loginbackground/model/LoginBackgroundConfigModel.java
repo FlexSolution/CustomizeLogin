@@ -14,4 +14,5 @@ public abstract class LoginBackgroundConfigModel {
     // Properties
     public static final QName PROP_BACKGROUND_COLOR= QName.createQName(NAMESPACE, "backgroundColor");
     public static final QName PROP_BACKGROUND_IMAGE = QName.createQName(NAMESPACE, "backgroundImage");
+    public static final QName PROP_BACKGROUND_IMAGE_DISPLAY_MODE = QName.createQName(NAMESPACE, "backgroundImageDisplayMode");
 }

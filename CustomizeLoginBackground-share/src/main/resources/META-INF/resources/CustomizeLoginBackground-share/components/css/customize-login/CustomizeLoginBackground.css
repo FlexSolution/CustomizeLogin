@@ -1,7 +1,40 @@
-body.alfresco-guest {
+bodyheightesco-guest {
     background: transparent none;
 }
 
-body.alfresco-guest .sticky-wrapper{
+body.alfresco-guest .sticky-wrapper {
     background: transparent none;
+}
+
+body.alfresco-guest .sticky-wrapper.fill {
+    background: no-repeat center;
+    background-size: cover
+}
+
+body.alfresco-guest .sticky-wrapper.fit-auto {
+    background: no-repeat center;
+    background-size: contain;
+}
+
+body.alfresco-guest .sticky-wrapper.fit-height {
+    background: no-repeat center;
+    background-size: auto 100%;
+}
+
+body.alfresco-guest .sticky-wrapper.fit-width {
+    background: no-repeat center;
+    background-size: 100% auto;
+}
+
+body.alfresco-guest .sticky-wrapper.stretch {
+    background: no-repeat center;
+    background-size: 100% 100%;
+}
+
+body.alfresco-guest .sticky-wrapper.tile {
+    background: transparent none;
+}
+
+body.alfresco-guest .sticky-wrapper.center {
+    background: no-repeat fixed center;
 }

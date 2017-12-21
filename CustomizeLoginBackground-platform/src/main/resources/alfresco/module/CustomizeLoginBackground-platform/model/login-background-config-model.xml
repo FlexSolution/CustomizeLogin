@@ -11,6 +11,22 @@
         <namespace uri="http://flex-solution.com/model/login-background/1.0" prefix="fslb"/>
     </namespaces>
 
+    <constraints>
+        <constraint name="fslb:backgroundImageDisplayModesList" type="LIST">
+            <parameter name="allowedValues">
+                <list>
+                    <value>fill</value>
+                    <value>fit-auto</value>
+                    <value>fit-height</value>
+                    <value>fit-width</value>
+                    <value>stretch</value>
+                    <value>tile</value>
+                    <value>center</value>
+                </list>
+            </parameter>
+        </constraint>
+    </constraints>
+
     <types>
         <type name="fslb:login-background-config">
             <title>Describes Login Background config</title>
@@ -29,6 +45,14 @@
                     <title>Delete Background Image</title>
                     <type>d:boolean</type>
                     <default>false</default>
+                </property>
+                <property name="fslb:backgroundImageDisplayMode">
+                    <title>Background Image Display Mode</title>
+                    <type>d:text</type>
+                    <default>fill</default>
+                    <constraints>
+                        <constraint ref="fslb:backgroundImageDisplayModesList"/>
+                    </constraints>
                 </property>
             </properties>
             <mandatory-aspects>
