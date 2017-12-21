@@ -22,7 +22,14 @@ public class BackgroundLoginImageWebScript extends AbstractWebScript {
     @Override
     public void execute(WebScriptRequest req, WebScriptResponse res) throws IOException {
         res.setContentType(MimetypeMap.MIMETYPE_IMAGE_JPEG);
-        FileCopyUtils.copy(AuthenticationUtil.runAs(() -> contentService.getReader(resourceService.getNode(Constants.CONFIG_NODE_PATH, LoginBackgroundConfigModel.TYPE_LOGIN_BACKGROUND_CONFIG_TYPE), LoginBackgroundConfigModel.PROP_BACKGROUND_IMAGE).getContentInputStream(), AuthenticationUtil.getAdminUserName()), res.getOutputStream());
+        FileCopyUtils.copy(AuthenticationUtil.runAs(() ->
+                        contentService.getReader(
+                                resourceService.getNode(
+                                        Constants.CONFIG_NODE_PATH,
+                                        LoginBackgroundConfigModel.TYPE_LOGIN_BACKGROUND_CONFIG_TYPE),
+                                LoginBackgroundConfigModel.PROP_BACKGROUND_IMAGE)
+                                .getContentInputStream(),
+                AuthenticationUtil.getAdminUserName()), res.getOutputStream());
     }
 
     public void setContentService(ContentService contentService) {
