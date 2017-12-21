@@ -32,10 +32,10 @@ You can find AMPs here `.CustomizeLoginBackground-platform/target/CustomizeLogin
     *  `Fill` - fill out the image by smaller side (can cut the image, you will not see selected `Background Color`). 
     *  `Aoto fit` - fit the image automatically (you can see free space which will be filled by selected `Background Color`). 
     *  `Fit by height` - fit the image by height, image will be scaled by 100% of height (you can see free vertical spaces which will be filled by selected `Background Color`).
-        *  `Fit by width` - fit the image by width, image will be scaled by 100% of width (you can see free horizontal spaces which will be filled by selected `Background Color`). 
-        *  `Sretch` - fit the image by browser window with distortion of geometry (you will not see selected `Background Color` and image will not be cut).
-        *  `Tile` -  image will be repeated many times if it is a small one (you will not see selected `Background Color`).
-        *  `Center` -  image will be centered on browser window (you can see free horizontal and vertical spaces which will be filled by selected `Background Color`).
+    *  `Fit by width` - fit the image by width, image will be scaled by 100% of width (you can see free horizontal spaces which will be filled by selected `Background Color`). 
+    *  `Sretch` - fit the image by browser window with distortion of geometry (you will not see selected `Background Color` and image will not be cut).
+    *  `Tile` -  image will be repeated many times if it is a small one (you will not see selected `Background Color`).
+    *  `Center` -  image will be centered on browser window (you can see free horizontal and vertical spaces which will be filled by selected `Background Color`).
         
 *  **NOTE: If upload a smaller image than login form and select a `Center` mode - the image will be hidden by this form and you can not see it.** 
 
