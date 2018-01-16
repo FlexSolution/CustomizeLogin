@@ -8,6 +8,10 @@
                     <show id="fslb:backgroundColor"/>
                     <show id="fslb:deleteBackgroundImage"/>
                     <show id="fslb:backgroundImageDisplayMode"/>
+                    <show id="fslb:backgroundImage"/>
+                    <show id="fslb:copyright"/>
+                    <show id="fslb:productName"/>
+                    <show id="fslb:productCommunity"/>
                     <hide id="cm:isIndexed"/>
                     <hide id="cm:isContentIndexed"/>
                 </field-visibility>

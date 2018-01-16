@@ -23,13 +23,27 @@
                         div.style.backgroundColor = resp.color;
 
                         if (resp.isBackgroundImage) {
-                            div.style.backgroundImage = "url('" + proxyUrl + "customize/login/image')";
+                            div.style.backgroundImage = "url('" + proxyUrl + "customize/login/image?type=backgroundImage')";
                         }
+
+                        function updateDiv(selector, responseProperty) {
+                            var el = document.querySelector(selector);
+                            el.innerHTML = resp[responseProperty];
+                            el.style.display = "block";
+                        }
+
+                        updateDiv(".login-copy", "copyright");
+                        updateDiv(".product-name", "productName");
+                        updateDiv(".product-community", "productCommunity");
                     },
                     scope: this
                 },
                 failureCallback: {
                     fn: function (response) {
+                        document.querySelector(".login-copy").style.display="block";
+                        document.querySelector(".product-name").style.display="block";
+                        document.querySelector(".product-community").style.display="block";
+                        document.querySelector(".product-tagline").style.display="block";
                         response = response.serverResponse ? YAHOO.lang.JSON.parse(response.serverResponse.responseText) : response;
                         console.error(response);
                     },

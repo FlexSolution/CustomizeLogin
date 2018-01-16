@@ -38,3 +38,9 @@ body.alfresco-guest .sticky-wrapper.tile {
 body.alfresco-guest .sticky-wrapper.center {
     background: no-repeat fixed center;
 }
+
+.login-copy, .product-name, .product-community, .product-tagline {
+    display:none;
+}
+
+

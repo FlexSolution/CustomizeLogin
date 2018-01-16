@@ -54,6 +54,21 @@
                         <constraint ref="fslb:backgroundImageDisplayModesList"/>
                     </constraints>
                 </property>
+                <property name="fslb:copyright">
+                    <title>Copyright</title>
+                    <type>d:text</type>
+                    <default>2005-2017 Alfresco Software Inc. All rights reserved.</default>
+                </property>
+                <property name="fslb:productName">
+                    <title>Product Name</title>
+                    <type>d:text</type>
+                    <default>Alfresco Share</default>
+                </property>
+                <property name="fslb:productCommunity">
+                    <title>Product Community</title>
+                    <type>d:text</type>
+                    <default>Alfresco Community Edition</default>
+                </property>
             </properties>
             <mandatory-aspects>
                 <aspect>fslb:doNotIndexContentControl</aspect>
