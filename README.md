@@ -22,7 +22,11 @@ You can find AMPs here `.CustomizeLoginBackground-platform/target/CustomizeLogin
 
 * login as the admin user to Alfresco Share. Open:`Admin Tools`/`Tools`/`Login Background` -  Sample URL for locally installed Alfresco: [http://localhost:8080/share/page/console/admin-console/CustomizeLoginBackground-config-form](http://localhost:8080/share/page/console/admin-console/CustomizeLoginBackground-config-form) 
 * Choose an image from your PC, choose any background color (will used for filling free space that will not use image, if you choose some of `Displaying modes` that can leave a free space on the screen because of image scaling)
+
+* Change additional fields if you wish (Copyright, Product name, etc)
+
 * click `Submit`. After successful you will see a preview of the image.
+
 
 ## Advanced Instruction
 
